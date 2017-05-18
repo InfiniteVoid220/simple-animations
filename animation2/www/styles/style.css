@@ -1,0 +1,93 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.wrapper{
+	position: relative;
+	width: 250px;
+	height: 250px;
+	border-radius: 100%;
+	border: 2px solid grey;
+	margin: 100px auto;
+}
+
+.circle{
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: red;
+	border: 2px solid yellow;
+
+	transition: transform 4s;
+	animation-duration: 15s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	
+	text-align: center;
+	line-height: 45px;
+	vertical-align: center;
+}
+
+.hiden{
+	transform: scale(0,0);
+}
+
+.show{
+	transform: scale(1,1);
+	animation: move 4s linear infinite;
+}
+
+.c1{
+	transform: rotate(0deg)
+	           translate(-125px)
+	           rotate(0deg);
+	animation-name: rotate-c1;
+}
+
+.c2{
+	transform: rotate(180deg)
+	           translate(-125px)
+	           rotate(-180deg);
+	animation-name: rotate-c2;
+}
+
+.c3{
+	transform: rotate(270deg)
+	           translate(-125px)
+	           rotate(-270deg);
+	animation-name: rotate-c3;
+}
+
+@keyframes rotate-c1 {
+	to {
+		transform: rotate(360deg)
+		           translate(-125px) 
+		           rotate(-360deg);
+	}
+}
+
+@keyframes rotate-c2 {
+	to {
+		transform: rotate(540deg)
+		           translate(-125px) 
+		           rotate(-540deg);
+	}
+}
+
+@keyframes rotate-c3 {
+	to {
+		transform: rotate(630deg)
+		           translate(-125px) 
+		           rotate(-630deg);
+	}
+}
